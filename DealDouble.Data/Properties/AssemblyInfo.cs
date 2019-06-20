@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DealDouble.Entities")]
+[assembly: AssemblyTitle("DealDouble.Data")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DealDouble.Entities")]
+[assembly: AssemblyProduct("DealDouble.Data")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("15f0a6bd-da50-46c8-8f27-a55e5c9d3256")]
+[assembly: Guid("44275491-d68e-4f65-bb32-4df3afa38ee6")]
 
 // Version information for an assembly consists of the following four values:
 //

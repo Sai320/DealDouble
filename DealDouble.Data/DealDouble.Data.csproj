@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{15F0A6BD-DA50-46C8-8F27-A55E5C9D3256}</ProjectGuid>
+    <ProjectGuid>{44275491-D68E-4F65-BB32-4DF3AFA38EE6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DealDouble.Entities</RootNamespace>
-    <AssemblyName>DealDouble.Entities</AssemblyName>
+    <RootNamespace>DealDouble.Data</RootNamespace>
+    <AssemblyName>DealDouble.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,7 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,8 +49,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Auction.cs" />
+    <Compile Include="DealDoubleContext.cs" />
+    <Compile Include="Migrations\201906201051141_autionProject.cs" />
+    <Compile Include="Migrations\201906201051141_autionProject.Designer.cs">
+      <DependentUpon>201906201051141_autionProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906201057487_autionProject1.cs" />
+    <Compile Include="Migrations\201906201057487_autionProject1.Designer.cs">
+      <DependentUpon>201906201057487_autionProject1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DealDouble.Entities\DealDouble.Entities.csproj">
+      <Project>{15f0a6bd-da50-46c8-8f27-a55e5c9d3256}</Project>
+      <Name>DealDouble.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906201051141_autionProject.resx">
+      <DependentUpon>201906201051141_autionProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906201057487_autionProject1.resx">
+      <DependentUpon>201906201057487_autionProject1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
